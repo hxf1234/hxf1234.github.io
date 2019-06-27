@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务. 官网地址:https://www.workerman.net/workerman  gateway-worker则是基于workerman开发的TCP长连接. gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发送信息">
+<meta name="description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务.    官网地址:https://www.workerman.net/workerman gateway-worker则是基于workerman开发的TCP长连接.    gatewayClient是辅助workerman或者gateway进行用户分组以及向用">
 <meta name="keywords" content="php,workerman">
 <meta property="og:type" content="article">
 <meta property="og:title" content="php与workerman">
 <meta property="og:url" content="http://yoursite.com/2019/06/27/php与workerman/index.html">
-<meta property="og:site_name" content="HXF&#39;blog">
-<meta property="og:description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务. 官网地址:https://www.workerman.net/workerman  gateway-worker则是基于workerman开发的TCP长连接. gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发送信息">
+<meta property="og:site_name" content="HXF&#39;s BLOG">
+<meta property="og:description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务.    官网地址:https://www.workerman.net/workerman gateway-worker则是基于workerman开发的TCP长连接.    gatewayClient是辅助workerman或者gateway进行用户分组以及向用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/gateway.png">
-<meta property="og:updated_time" content="2019-06-27T07:34:57.338Z">
+<meta property="og:updated_time" content="2019-06-27T07:50:47.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php与workerman">
-<meta name="twitter:description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务. 官网地址:https://www.workerman.net/workerman  gateway-worker则是基于workerman开发的TCP长连接. gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发送信息">
+<meta name="twitter:description" content="php与workerman简介workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务.    官网地址:https://www.workerman.net/workerman gateway-worker则是基于workerman开发的TCP长连接.    gatewayClient是辅助workerman或者gateway进行用户分组以及向用">
 <meta name="twitter:image" content="http://yoursite.com/images/gateway.png">
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <title>php与workerman | HXF'blog</title>
+  <title>php与workerman | HXF's BLOG</title>
   
 
 
@@ -158,7 +158,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">HXF'blog</span>
+        <span class="site-title">HXF's BLOG</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -278,13 +278,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/27/php与workerman/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Merlin">
+      <meta itemprop="name" content="Hxf">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/yellowTooth.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HXF'blog">
+      <meta itemprop="name" content="HXF's BLOG">
     </span>
 
     
@@ -342,12 +342,9 @@
       
 
       
-        <h1 id="php与workerman"><a href="#php与workerman" class="headerlink" title="php与workerman"></a>php与workerman</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><pre><code>workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务.
-官网地址:https://www.workerman.net/workerman
-
-gateway-worker则是基于workerman开发的TCP长连接.
-gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发送信息的组件, 还能快速绑定系统uid与clientid.
-</code></pre><h3 id="一-安装"><a href="#一-安装" class="headerlink" title="一.安装"></a>一.安装</h3><p>TP5相关文档：<a href="https://www.kancloud.cn/manual/thinkphp5/235128" target="_blank" rel="noopener">https://www.kancloud.cn/manual/thinkphp5/235128</a><br>1.workerman<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># linux</span><br><span class="line">composer require topthink/think-worker</span><br><span class="line"># windows</span><br><span class="line">composer require workerman/workerman-for-win</span><br><span class="line"># 若安装不上可能是版本不对应, 请指定对应版本即可</span><br><span class="line">composer require topthink/think-worker v1.0.1</span><br></pre></td></tr></table></figure><br>2.gateway-worker<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># linux</span><br><span class="line">composer require gateway-worker</span><br><span class="line"># windows</span><br><span class="line">composer require workerman/workerman-for-win</span><br></pre></td></tr></table></figure><br>3.gatewayClient<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer require workerman/gatewayclient</span><br></pre></td></tr></table></figure></p>
+        <h1 id="php与workerman"><a href="#php与workerman" class="headerlink" title="php与workerman"></a>php与workerman</h1><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>workerman 是一个高性能的php Socket即时通讯框架.可以用来迅速搭建聊天室或者广播之类的业务.<br>    官网地址:<a href="https://www.workerman.net/workerman" target="_blank" rel="noopener">https://www.workerman.net/workerman</a></p>
+<p>gateway-worker则是基于workerman开发的TCP长连接.<br>    gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发送信息的组件, 还能快速绑定系统uid与clientid.</p>
+<h3 id="一-安装"><a href="#一-安装" class="headerlink" title="一.安装"></a>一.安装</h3><p>TP5相关文档：<a href="https://www.kancloud.cn/manual/thinkphp5/235128" target="_blank" rel="noopener">https://www.kancloud.cn/manual/thinkphp5/235128</a><br>1.workerman<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># linux</span><br><span class="line">composer require topthink/think-worker</span><br><span class="line"># windows</span><br><span class="line">composer require workerman/workerman-for-win</span><br><span class="line"># 若安装不上可能是版本不对应, 请指定对应版本即可</span><br><span class="line">composer require topthink/think-worker v1.0.1</span><br></pre></td></tr></table></figure><br>2.gateway-worker<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># linux</span><br><span class="line">composer require gateway-worker</span><br><span class="line"># windows</span><br><span class="line">composer require workerman/workerman-for-win</span><br></pre></td></tr></table></figure><br>3.gatewayClient<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer require workerman/gatewayclient</span><br></pre></td></tr></table></figure></p>
 <h3 id="二-gateway的运行原理"><a href="#二-gateway的运行原理" class="headerlink" title="二.gateway的运行原理"></a>二.gateway的运行原理</h3><p><img src="/images/gateway.png" alt="gateway的运行原理"></p>
 
       
@@ -455,9 +452,9 @@ gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/yellowTooth.jpg" alt="Merlin">
+              <img class="site-author-image" itemprop="image" src="/images/yellowTooth.jpg" alt="Hxf">
             
-              <p class="site-author-name" itemprop="name">Merlin</p>
+              <p class="site-author-name" itemprop="name">Hxf</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -538,7 +535,7 @@ gatewayClient是辅助workerman或者gateway进行用户分组以及向用户发
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Merlin</span>
+  <span class="author" itemprop="copyrightHolder">Hxf</span>
 
   
 </div>
