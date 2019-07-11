@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="HXF&#39;s BLOG">
 <meta property="og:description" content="Linux的定时任务检查是否安装crontab服务  rpm -qa|grep cron  crontab命令12345678910111213crontab [-u username]　　　　//省略用户表表示操作当前用户的crontab    -e      (编辑工作表)    -l      (列出工作表里的命令)    -r      (删除工作作)# crontab基本格式# +---">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-11T01:49:44.108Z">
+<meta property="og:updated_time" content="2019-07-11T02:03:10.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的定时任务">
 <meta name="twitter:description" content="Linux的定时任务检查是否安装crontab服务  rpm -qa|grep cron  crontab命令12345678910111213crontab [-u username]　　　　//省略用户表表示操作当前用户的crontab    -e      (编辑工作表)    -l      (列出工作表里的命令)    -r      (删除工作作)# crontab基本格式# +---">
@@ -395,10 +395,7 @@
 <ol>
 <li>* 匹配该域的所有值;<br>“0 0 13 * * ?” 每天的13点执行一次</li>
 <li>/ 表示时间的起始与间隔;<br>“0 0 5/3 * * ?” 五点开始,每隔3小时执行一次</li>
-<li><ul>
-<li>表示匹配该域上的一个范围<br>“0 30 9-15 ? * *“ 表示每天的9:30-15:30每小时执行一次</li>
-</ul>
-</li>
+<li>- 表示匹配该域上的一个范围<br>“0 30 9-15 ? * *“ 表示每天的9:30-15:30每小时执行一次</li>
 <li>, 表示枚举<br>“0 0 8,16,23 ? * 1,7”表示每个周六日的8点、16点、23点各执行一次</li>
 <li>? 在cron表达式中必须出现且只能出现1次，用在日域或周域上，表示不确定值、不限制值;<br>它与*的区别是，并不能匹配到该域上的所有值，例如指定了3月份每个周五，那么3月份的周五可能只有4个值</li>
 <li>L 只能用于日域或周域，用于日域时表示当月最后一天，用于周域如果前面不加数字表示周六，加数字表示最后一个周值<br>“0 0 23 L * ?”表示每月最后一天的23点执行，”0 0 23 ? * L”表示每周六的23点执行，”0 0 23 ? * 3L”表示每月最后一个周二的23点执行</li>
