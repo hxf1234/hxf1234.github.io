@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="HXF&#39;s BLOG">
 <meta property="og:description" content="Laravel的post请求报错419最近在学习laravel框架的时候,路由写post请求,用postman模拟请求一直报错419;查询资料得知post请求laravel需要加crsf token; 解决方法:1.在App\Http\Middleware\VerifyCsrfToken.php中写个通配 123456789/** * The URIs that should be exclude">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-03T02:13:14.500Z">
+<meta property="og:updated_time" content="2019-08-06T09:10:52.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel的post请求一直报错419">
 <meta name="twitter:description" content="Laravel的post请求报错419最近在学习laravel框架的时候,路由写post请求,用postman模拟请求一直报错419;查询资料得知post请求laravel需要加crsf token; 解决方法:1.在App\Http\Middleware\VerifyCsrfToken.php中写个通配 123456789/** * The URIs that should be exclude">
@@ -342,9 +342,9 @@
       
         <h1 id="Laravel的post请求报错419"><a href="#Laravel的post请求报错419" class="headerlink" title="Laravel的post请求报错419"></a><center>Laravel的post请求报错419</center></h1><p>最近在学习laravel框架的时候,路由写post请求,用postman模拟请求一直报错419;查询资料得知post请求laravel需要加crsf token;</p>
 <p>解决方法:<br>1.在App\Http\Middleware\VerifyCsrfToken.php中写个通配</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * The URIs that should be excluded from CSRF verification.</span><br><span class="line"> *</span><br><span class="line"> * @var array</span><br><span class="line"> */</span><br><span class="line">protected $except = [</span><br><span class="line">    //</span><br><span class="line">    &apos;*&apos;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * The URIs that should be excluded from CSRF verification.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@var</span> array</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">protected</span> $except = [</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="string">'*'</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong>: 此方法对于线上项目不安全. 还需研究下怎么添加crf token</p>
-<p>2.App\Http\Middleware\VerifyCsrfToken.php重写其父类handle也可以达到效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public function handle($request, \Closure $next)</span><br><span class="line">&#123;</span><br><span class="line">    // 使用CSRF</span><br><span class="line">    //return parent::handle($request, $next);</span><br><span class="line">    // 禁用CSRF</span><br><span class="line">    return $next($request);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.App\Http\Middleware\VerifyCsrfToken.php重写其父类handle也可以达到效果<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">handle</span><span class="params">($request, \Closure $next)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 使用CSRF</span></span><br><span class="line">    <span class="comment">//return parent::handle($request, $next);</span></span><br><span class="line">    <span class="comment">// 禁用CSRF</span></span><br><span class="line">    <span class="keyword">return</span> $next($request);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -466,7 +466,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -479,7 +479,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

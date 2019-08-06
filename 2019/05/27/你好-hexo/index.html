@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="HXF&#39;s BLOG">
 <meta property="og:description" content="hexo.io一.安装1. 需要先安装git与node.js 2. 找到合适的位置,运行安装命令     npm install -g hexo-cli 4. 初始化目录     hexo init 5. 安装所需组件     npm install 6. 开启hexo服务     hexo server 如果出现了banner为hexo字样的网页即安装成功 二.卸载npm uninstall h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-28T02:49:18.053Z">
+<meta property="og:image" content="http://yoursite.com/images/PHP_hightlight.jpg">
+<meta property="og:updated_time" content="2019-08-06T09:21:28.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好,hexo">
 <meta name="twitter:description" content="hexo.io一.安装1. 需要先安装git与node.js 2. 找到合适的位置,运行安装命令     npm install -g hexo-cli 4. 初始化目录     hexo init 5. 安装所需组件     npm install 6. 开启hexo服务     hexo server 如果出现了banner为hexo字样的网页即安装成功 二.卸载npm uninstall h">
+<meta name="twitter:image" content="http://yoursite.com/images/PHP_hightlight.jpg">
 
 
 
@@ -365,7 +367,7 @@
 3. 测试是否成功
     $ ssh -T git@github.com
 4. 配置Deployment,在根目录_config.yml,修改repo值
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:hxf1234/hxf1234.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</code></pre><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:hxf1234/hxf1234.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 <h3 id="四-keyword"><a href="#四-keyword" class="headerlink" title="四. keyword"></a>四. keyword</h3><p><strong>layout</strong> 布局</p>
 <p><strong>Front-Matter</strong> 是文章最上面 —- 分割的区域</p>
 <p><strong>draft</strong> 草稿</p>
@@ -375,21 +377,33 @@
 hexo new [layout] &lt;title&gt; #layout在配置文件中,不写默认post布局
 在新建文章时会根据Scaffold内相对应的文件建立文件
 </code></pre><h3 id="六-标签插件"><a href="#六-标签插件" class="headerlink" title="六. 标签插件"></a>六. 标签插件</h3><p><strong>引用块</strong></p>
-<p>quote<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>quote<br><figure class="highlight twig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">blockquote</span> [author[, <span class="name">source</span>]] [link] [source_link_title] %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">content</span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">endblockquote</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure></p>
 <p><strong>代码块</strong></p>
 <p>code</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock <span class="string">[title]</span> <span class="string">[lang:language]</span> <span class="string">[url]</span> <span class="string">[link text]</span> %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
 <p>还可插入视频,图片,引用文章,引用资源等<br><a href="https://hexo.io/zh-cn/docs/tag-plugins" target="_blank" rel="noopener">文档说明</a></p>
 <h3 id="七-资源文件夹"><a href="#七-资源文件夹" class="headerlink" title="七.资源文件夹"></a>七.资源文件夹</h3><p>资源文件管理功能开启,在用new命令创建文章的时候,会自动创建一个与文章名相同的文件夹,可以使用绝对路径引入文件流</p>
 <pre><code>_config.yml
 post_asset_flder: true
 </code></pre><p>相对路径引用的<strong>标签插件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_path</span> slug %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_img</span> slug [title] %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">asset_link</span> slug [title] %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <h3 id="八-用git部署文件"><a href="#八-用git部署文件" class="headerlink" title="八. 用git部署文件"></a>八. 用git部署文件</h3><p>先安装 hexo-deployer-git</p>
 <pre><code>$ npm install hexo-deployer-git --save
 </code></pre><p>在编辑好文件后,使用命令一键部署至服务器</p>
 <pre><code>$ hexo d -g
-</code></pre>
+</code></pre><h3 id="九-next的主题设置代码高亮"><a href="#九-next的主题设置代码高亮" class="headerlink" title="九. next的主题设置代码高亮"></a>九. next的主题设置代码高亮</h3><ol>
+<li><p>打开hexo的_config.yml配置文件</p>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    auto_detect:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    tab_replace:</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开next的_config.yml配置文件</p>
+ <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">highlight_theme:</span> night</span><br></pre></td></tr></table></figure>
+<p> 网上说有其他的主题, 分别是：</p>
+<p> normal<br> night<br> night eighties<br> night blue<br> night bright</p>
+</li>
+<li>在包裹代码块的后面加上所写代码的语言是什么的, 例 我是用 ```写的PHP代码:</li>
+</ol>
+<p><img src="/images/PHP_hightlight.jpg" alt="gateway的运行原理"></p>
+
       
     </div>
     
@@ -508,7 +522,7 @@ post_asset_flder: true
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -521,7 +535,7 @@ post_asset_flder: true
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -554,7 +568,7 @@ post_asset_flder: true
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-io"><span class="nav-number">1.</span> <span class="nav-text">hexo.io</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">一.安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-卸载"><span class="nav-number">1.0.2.</span> <span class="nav-text">二.卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-将hexo与github连接起来"><span class="nav-number">1.0.3.</span> <span class="nav-text">三.将hexo与github连接起来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-keyword"><span class="nav-number">1.0.4.</span> <span class="nav-text">四. keyword</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-写"><span class="nav-number">1.0.5.</span> <span class="nav-text">五. 写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六-标签插件"><span class="nav-number">1.0.6.</span> <span class="nav-text">六. 标签插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七-资源文件夹"><span class="nav-number">1.0.7.</span> <span class="nav-text">七.资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八-用git部署文件"><span class="nav-number">1.0.8.</span> <span class="nav-text">八. 用git部署文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-io"><span class="nav-number">1.</span> <span class="nav-text">hexo.io</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">一.安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-卸载"><span class="nav-number">1.0.2.</span> <span class="nav-text">二.卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-将hexo与github连接起来"><span class="nav-number">1.0.3.</span> <span class="nav-text">三.将hexo与github连接起来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-keyword"><span class="nav-number">1.0.4.</span> <span class="nav-text">四. keyword</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-写"><span class="nav-number">1.0.5.</span> <span class="nav-text">五. 写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六-标签插件"><span class="nav-number">1.0.6.</span> <span class="nav-text">六. 标签插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七-资源文件夹"><span class="nav-number">1.0.7.</span> <span class="nav-text">七.资源文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八-用git部署文件"><span class="nav-number">1.0.8.</span> <span class="nav-text">八. 用git部署文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九-next的主题设置代码高亮"><span class="nav-number">1.0.9.</span> <span class="nav-text">九. next的主题设置代码高亮</span></a></li></ol></li></ol></div>
             
 
           </div>
