@@ -344,7 +344,7 @@
 <blockquote>
 <p>rpm -qa|grep cron</p>
 </blockquote>
-<p><strong>crontab命令</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">crontab [-u username]　　　　//省略用户表表示操作当前用户的crontab</span><br><span class="line">    -e      (编辑工作表)</span><br><span class="line">    -l      (列出工作表里的命令)</span><br><span class="line">    -r      (删除工作作)</span><br><span class="line"></span><br><span class="line"># crontab基本格式</span><br><span class="line"># +---------------- minute  分钟(0 - 59)</span><br><span class="line"># |  +------------- hour    小时(0 - 23)</span><br><span class="line"># |  |  +---------- day     日期(1 - 31)</span><br><span class="line"># |  |  |  +------- month   月份(1 - 12)</span><br><span class="line"># |  |  |  |  +---- week    星期(0 - 7) (星期天=0 or 7)</span><br><span class="line"># |  |  |  |  |</span><br><span class="line"># *  *  *  *  *  要运行的命令</span><br></pre></td></tr></table></figure></p>
+<p><strong>crontab命令</strong><br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">crontab [-u username]　　　　<span class="comment">//省略用户表表示操作当前用户的crontab</span></span><br><span class="line">    -e      (编辑工作表)</span><br><span class="line">    -l      (列出工作表里的命令)</span><br><span class="line">    -r      (删除工作作)</span><br><span class="line"></span><br><span class="line"><span class="meta"># crontab基本格式</span></span><br><span class="line"><span class="meta"># +---------------- minute  分钟(0 - 59)</span></span><br><span class="line"><span class="meta"># |  +------------- hour    小时(0 - 23)</span></span><br><span class="line"><span class="meta"># |  |  +---------- day     日期(1 - 31)</span></span><br><span class="line"><span class="meta"># |  |  |  +------- month   月份(1 - 12)</span></span><br><span class="line"><span class="meta"># |  |  |  |  +---- week    星期(0 - 7) (星期天=0 or 7)</span></span><br><span class="line"><span class="meta"># |  |  |  |  |</span></span><br><span class="line"><span class="meta"># *  *  *  *  *  要运行的命令</span></span><br></pre></td></tr></table></figure></p>
 <p>crontab的命令构成为 时间域+动作，其时间有<strong>秒域、分域、时域、日域、月域、周域</strong>五种，操作符有:</p>
 <table>
 <thead>
@@ -612,7 +612,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -625,7 +625,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
